@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body,
 html {
   height: 100%;
@@ -9,4 +10,12 @@ html {
   position: absolute;
   left: 0;
   top: 0;
+=======
+.content_box {
+  width: 100%;
+}
+.content_box > div {
+  width: 45%;
+  height: 400px;
+>>>>>>> index
 }
