@@ -1,21 +1,7 @@
-<<<<<<< HEAD
-body,
-html {
-  height: 100%;
-}
-.left_menu {
-  width: 180px;
-  height: 100%;
-  background: #222d32;
-  position: absolute;
-  left: 0;
-  top: 0;
-=======
 .content_box {
   width: 100%;
 }
 .content_box > div {
   width: 45%;
   height: 400px;
->>>>>>> index
 }

@@ -1,5 +1,4 @@
 
-
 var myChart = echarts.init(document.getElementById('left_chart'));
 var myChart2 = echarts.init(document.getElementById('right_chart'));
  // 指定图表的配置项和数据
