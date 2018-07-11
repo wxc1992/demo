@@ -1,8 +1,104 @@
-*{
-    margin:0;
-    padding: 0;
-    list-style: none;
+body,
+html {
+  height: 100%;
 }
-.marg_top{
-    margin-top:150px;
+body {
+  padding-left: 180px;
+  transition: all 1s;
+}
+body.active {
+  padding-left: 0;
+}
+a:hover,
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.marg_top {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 200px;
+}
+.left_menu {
+  width: 180px;
+  height: 100%;
+  background: #222d32;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 1s;
+}
+.left_menu .menu_header {
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.left_menu .menu_header a {
+  display: block;
+  color: #fff;
+  background: #069;
+}
+.left_menu .touxiang {
+  margin-bottom: 50px;
+}
+.left_menu .touxiang img {
+  width: 80px;
+  height: 80px;
+  display: block;
+  border-radius: 50%;
+  margin: 10px auto;
+}
+.left_menu .touxiang p {
+  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  text-align: center;
+}
+.left_menu .menu_main li a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  padding-left: 30px;
+  border-left: 3px solid transparent;
+}
+.left_menu .menu_main li a.active {
+  border-left: 3px solid #069;
+  background: #1d1f21;
+}
+.left_menu .menu_main li .second a {
+  padding-left: 50px;
+}
+.left_menu.active {
+  left: -180px;
+}
+.main_box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-top: 80px;
+}
+.main_box .top_tool {
+  background: #069;
+  padding: 0 20px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.main_box .top_tool a {
+  color: #fff;
+  font-size: 16px;
 }
