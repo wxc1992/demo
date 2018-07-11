@@ -1,0 +1,7 @@
+.content_box {
+  width: 100%;
+}
+.content_box > div {
+  width: 45%;
+  height: 400px;
+}
