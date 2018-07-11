@@ -13,6 +13,9 @@ $(function(){
                     notEmpty: {
                       message: '用户名不能为空'
                     },
+                    callback:{
+                        message:'用户名不存在'
+                    }
                     
                 }
             },
@@ -28,12 +31,15 @@ $(function(){
                       max: 12,
                       message: '密码长度必须在6到12之间'
                     },
+                    callback:{
+                        message:'密码错误'
+                    }
                     
                   }
             },
         }
     })
-
+    var validator = $("form").data('bootstrapValidator');  //获取表单校验实例
     $("form").on('success.form.bv', function (e) {
         e.preventDefault();
         console.log($('form').serialize());
@@ -43,10 +49,11 @@ $(function(){
             data:$('form').serialize(),
             success:function(data){
                if(data.error==1001){
-                alert('密码错误');
+                // alert('密码错误');
+                validator.updateStatus('password','INVALID','callback');
                }
                if(data.error==1000){
-                alert('用户名不存在');
+                validator.updateStatus('username','INVALID','callback');
                }
                if(data.success){
                  location.href = 'index.html'
@@ -54,6 +61,9 @@ $(function(){
 
             }
         })
+    })
+    $('.reset').click(function(){  
+        validator.resetForm(true);
     })
 
 })
