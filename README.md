@@ -1,4 +1,4 @@
-## 乐淘电商
+## 理想商城
 
 ### 移动端
 
@@ -9,35 +9,35 @@
 - 学习官网 http://dev.dcloud.net.cn/mui/
 - 官方文档 http://dev.dcloud.net.cn/mui/ui/
 - 组件展示 http://dcloud.io/hellomui/
- 
+
 **特点**
 
 - 最接近原生APP体验的高性能前端框架
 - 轻量
-追求性能体验，是我们开始启动MUI项目的首要目标，轻量必然是重要特征；
-MUI不依赖任何第三方JS库，压缩后的JS和CSS文件仅有100+K和60+K
+  追求性能体验，是我们开始启动MUI项目的首要目标，轻量必然是重要特征；
+  MUI不依赖任何第三方JS库，压缩后的JS和CSS文件仅有100+K和60+K
 - 原生UI
-鉴于之前的很多前端框架（特别是响应式布局的框架），UI控件看起来太像网页，没有原生感觉，因此追求原生UI感觉也是我们的重要目标
-MUI以iOS平台UI为基础，补充部分Android平台特有的UI控件
+  鉴于之前的很多前端框架（特别是响应式布局的框架），UI控件看起来太像网页，没有原生感觉，因此追求原生UI感觉也是我们的重要目标
+  MUI以iOS平台UI为基础，补充部分Android平台特有的UI控件
 - 流畅体验
-下拉刷新
-为实现下拉刷新功能，大多H5框架都是通过DIV模拟下拉回弹动画，在低端android手机上，
-DIV动画经常出现卡顿现象（特别是图文列表的情况）； 
-mui通过双webview解决这个DIV的拖动流畅度问题；拖动时，拖动的不是div，
-而是一个完整的webview（子webview），回弹动画使用原生动画
-     
+  下拉刷新
+  为实现下拉刷新功能，大多H5框架都是通过DIV模拟下拉回弹动画，在低端android手机上，
+  DIV动画经常出现卡顿现象（特别是图文列表的情况）； 
+  mui通过双webview解决这个DIV的拖动流畅度问题；拖动时，拖动的不是div，
+  而是一个完整的webview（子webview），回弹动画使用原生动画
+
      
 #### 首页
  - 充当移动端入口静态的
  - 搭建页面主体架子
- 
+
  具体到页面功能：
  1.顶部通栏
  2.轮播图
  3.导航栏
  4.运动生活专区
  5.底部页签
-   
+
 + 页面架子  
 ```html
 <!DOCTYPE html>
@@ -105,68 +105,68 @@ onerror="this.src = 'images/none.jpg' "
 
 - 静态页面
     + 搜索表单
-    包含了搜索框和按钮
-    
+      包含了搜索框和按钮
+
     + 历史搜索
-    两种情况  
-    没有历史记录的情况    显示没有搜索历史记录
-    有历史记录的情况      显示 历史记录  清空操作  历史列表
+      两种情况  
+      没有历史记录的情况    显示没有搜索历史记录
+      有历史记录的情况      显示 历史记录  清空操作  历史列表
 
 - 动态渲染
     + 输入搜索关键字  点击搜索  跳转搜索列表页  （把关键字传递给搜索列表页  同时记录这一次的搜索记录）
     + 需要页面初始化的时候  渲染上一次的搜索记录 （获取本地存储的数据 转换成js可以使用的数据 进行渲染）    
     + 点击搜索记录对应的删除按钮  删除当前对应的历史记录 （获取本机的记录删除一条从新记录到本地存储当中）
     + 点击情况历史记录  情况所有记录  （把本来存储的数据清空）
-    
+
     需求  记录10数据  如果超过加一条 删一条  如果有一样的删除 记录新的
-     
+
      
 #### 搜索列表页
-     
+
 - 静态页面
     + 搜索表单
     + 搜索排序
     + 搜索列表
-     
+
 - 动态渲染
 
     + 效果
-    
+
     1.下拉刷新
-    
+
     2.上拉加载
-    
+
     3.加载中状态
-    
+
     + 功能
-    
+
     初始化渲染  
     1.获取地址栏关键字  
     2.通过关键字去后台获取和关键字相关的商品数据  
     3.渲染商品列表  
-    
+
     当前页搜索  
     1.点击搜索按钮 获取到关键字  
     2.通过关键字去后台获取和关键字相关的商品数据  
     3.渲染商品列表  
-    
+
     排序展示  
     1.点击排序按钮 获取排序方式  
     2.通过当前的关键字和排序方式去后台获取相关的商品数据  
     3.渲染商品列表  
-    
+
     下拉刷新  
     1.当用户下拉页面   
     2.通过关键字去后台重新获取和关键字相关的商品数据  
     3.渲染商品列表    
-    
+
     上拉加载  
     1.当用户上拉页面  
     2.通过关键字去后台获取和关键字相关的商品数据（而且是根据当前页面进行获取）  
     3.渲染商品列表 当时是追加到页面当中  
-    
+
 #### 商品详情页
-     
+
  - 静态页面  
     + 顶部通栏
     + 底部操作栏  以前是切换
@@ -176,24 +176,23 @@ onerror="this.src = 'images/none.jpg' "
     + 商品尺寸  选择按钮
     + 商品数量  选择数量
     + 商品详情  描述
-   
+
  - 动态渲染   
     + 默认初始化页面的时候  渲染商品信息
     + 点击重加载按钮  刷新商品信息
     + 尺码选择
     + 数量选择
     + 加入购物车
-    
-    
+
 #### 登录
-    
-        
+
+
  - 静态页面   
     + 用户名
     + 密码
     + 登录按钮
     + 注册连接
-    
+
  - 动态渲染  
     + 看登录的来源
       1.从需要登录的页面跳转过来   登录成功之后会跳源页面  
@@ -203,20 +202,19 @@ onerror="this.src = 'images/none.jpg' "
         {error: 400, message: "未登录！"}
       ```
 #### 用户中心
-    
+
     - 静态页面 
-        
+
     - 动态渲染 
         + 获取个人信息并且展示
         + 点击退出按钮进行退出   
-           
+
 #### 购物车
 
 - 静态页面
     + 商品列表
     + 订单
- 
-    
+
 - 动态渲染 
     + 初始化  展示购物车中的商品
     + 删除购物车当中的商品
@@ -225,12 +223,12 @@ onerror="this.src = 'images/none.jpg' "
 
 
 ### 后台管理端
-    
+
     目录结构：后台的目录全部在admin目录下面
-    
+
     页面基本模板
-    
-    ```
+
+    ​```
     <!DOCTYPE html>
     <html>
     <head lang="en">
@@ -240,38 +238,38 @@ onerror="this.src = 'images/none.jpg' "
         <link rel="stylesheet" href="css/admin.css"/>
     </head>
     <body>
-    
-    
+
+
     <script src="assets/jquery/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="js/admin.js"></script>
     </body>
     </html>
     
-    ```
-    
+    ​```
+
 #### 登录
  - 静态的页面
-    
+
  - 动态交互
     + 前端校验功能
-    1.用户名不能为空
-    2.密码不能为空
-    3.密码在6-18个字符内
+      1.用户名不能为空
+      2.密码不能为空
+      3.密码在6-18个字符内
     + 重置功能（内容、校验）
     + 登录功能
-    1.点击按钮  发送登录请求 后台管理员 root 123456
-    2.登录成功  前端跳转到首页
-    3.登录失败  恢复可提交状态，具体的提示某一个表单元素的错误信息。
-    4.进度显示  在ajax请求过程当中使用进度显示功能
-    
+      1.点击按钮  发送登录请求 后台管理员 root 123456
+      2.登录成功  前端跳转到首页
+      3.登录失败  恢复可提交状态，具体的提示某一个表单元素的错误信息。
+      4.进度显示  在ajax请求过程当中使用进度显示功能
+
  -  基于bootstrap的前端校验插件 《bootstrapvalidator》
     + 文档参考 http://blog.csdn.net/nazhidao/article/details/51542508
-              http://blog.csdn.net/u013938465/article/details/53507109
-              http://www.cnblogs.com/v-weiwang/p/4834672.html?ptvd
-              http://bootstrapvalidator.votintsev.ru/api/
+             http://blog.csdn.net/u013938465/article/details/53507109
+             http://www.cnblogs.com/v-weiwang/p/4834672.html?ptvd
+             http://bootstrapvalidator.votintsev.ru/api/
     ```html
-    
+
     between：检测输入的值是否在两个指定的值之间。
     callback：通过回调函数返回验证信息。
     creditCard：验证信用卡格式。
@@ -288,7 +286,7 @@ onerror="this.src = 'images/none.jpg' "
     stringLength：验证字符串的长度。
     uri：验证URL地址是否有效。
     usZipCode：验证美国的邮政编码格式。  
-    
+
     defaultSubmit	
     默认提交表单	-  
     disableSubmitButtons	
@@ -305,14 +303,14 @@ onerror="this.src = 'images/none.jpg' "
     更新验证给定元素的结果	-  
     updateStatus(field, status, validatorName)	
     更新为给定字段验证器的结果，status可以 NOT_VALIDATED, VALIDATING, INVALID或 VALID，validatorName 字符串 验证器的名称。如果 null所有验证器,更新方法有效性的结果
-    
+
     ```
-      
+
  -  基于jquery的前端进度插件 《nprogress》     
     + 文档参考 http://blog.csdn.net/joyhen/article/details/24458427
-    
-    
-    
+
+
+    ​
 #### 管理主体结构
  - 静态的页面
     + 侧边栏
@@ -323,23 +321,23 @@ onerror="this.src = 'images/none.jpg' "
         1.顶部通栏
         2.路径导航
         3.不同页面不同的内容
-    
+
  - 动态交互 
     1.手风琴菜单
     2.收起和展开侧边栏
     3.退出  弹出对话狂  确定是否退出
-    
+
 #### 首页 
   - 渲染图表
     + 注册人数的柱状图
     + 几款热门的商品销售情况饼图
-    
+
     数据可视化  插件  echarts  http://echarts.baidu.com/
     数据可视化  插件  echarts  https://www.hcharts.cn/demo/highcharts
-    
+
     + 现在后台没有提供对应的数据接口  但是我们可以模拟
     + 给大家带来以后工作当中可能会遇到的问题
-    
+
 #### 用户管理
    - 用户信息的展示
      + 序号  用户名  手机号 状态（禁用、正常） 操作（禁用、启用） 
@@ -347,8 +345,7 @@ onerror="this.src = 'images/none.jpg' "
      + 基于bootstrap的分页插件  bootstrap-paginator 
    - 禁用某个用户
    - 启用某个用户
-    
-      
+
 
 
 
