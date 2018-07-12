@@ -26,7 +26,7 @@
   mui通过双webview解决这个DIV的拖动流畅度问题；拖动时，拖动的不是div，
   而是一个完整的webview（子webview），回弹动画使用原生动画
 
-     
+
 #### 首页
  - 充当移动端入口静态的
  - 搭建页面主体架子
@@ -45,7 +45,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
-    <title>乐淘首页</title>
+    <title>理想商城首页</title>
     <link rel="stylesheet" href="assets/mui/css/mui.css"/>
     <link rel="stylesheet" href="css/common.css"/>
 </head>
@@ -120,7 +120,7 @@ onerror="this.src = 'images/none.jpg' "
 
     需求  记录10数据  如果超过加一条 删一条  如果有一样的删除 记录新的
 
-     
+
 #### 搜索列表页
 
 - 静态页面
