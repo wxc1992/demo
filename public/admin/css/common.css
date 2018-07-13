@@ -109,3 +109,13 @@ a:active {
   vertical-align: middle;
   text-align: center;
 }
+.file_group {
+  position: relative;
+}
+.file_group #fileupload {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
