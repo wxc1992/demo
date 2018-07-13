@@ -72,6 +72,33 @@
                 <!-- /.modal-dialog -->
             </div>
             <!-- /.modal -->
+            <div class="modal fade" id="AddModal">
+                    <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title">添加分类</h4>
+                            </div>
+                            <form id="Addform">
+                                <div class="modal-body text-danger">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="add_first" placeholder="请输入一级分类" name="categoryName">
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                    <button type="submit" class="btn btn-primary catr-add">添加</button>
+                                </div>
+                            </form>
+                            
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+                <!-- /.modal -->
         <div class="top_tool clearfix">
             <div class="left_toggle pull-left">
                 <a href="javascript:;" class="glyphicon glyphicon-align-justify"></a>
@@ -90,6 +117,25 @@
                 </li>
                 <li class="active">一级菜单</li>
             </ol>
+            <div class="user_content ">
+                <input type="button" value="添加分类" class="btn btn-default marg_b btn-add">
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <td>序号</td>
+                            <td>分类名称</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       
+                    </tbody>
+                </table>
+                <div class="text-right">
+                        <ul id="userpage">
+    
+                        </ul>
+                </div>
+            </div>
         </div>
     </div>
     
@@ -97,9 +143,18 @@
     <script src="./lib/bootstrap/js/bootstrap.js"></script>
     <script src="./lib/bootstrap-validator/js/bootstrapValidator.js"></script>
     <script src="./lib/nprogress/nprogress.js"></script>
+    <script src="./lib/bootstrap-paginator/bootstrap-paginator.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
     <script src="./js/common.js"></script>
-    <script src="./js/login.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="./js/cate1.js"></script>
+    <script type="tpl/text" id="cate1">
+        {{each rows v i}}
+            <tr>
+                <td>{{(page-1)*size +i +1}}</td>
+                <td>{{v.categoryName}}</td>
+            </tr>
+        {{/each}}
+    </script>
 </body>
 
 </html>

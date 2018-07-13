@@ -26,6 +26,9 @@ a:active {
   transform: translateX(-50%);
   top: 200px;
 }
+.marg_b {
+  margin-bottom: 10px;
+}
 .left_menu {
   width: 180px;
   height: 100%;
