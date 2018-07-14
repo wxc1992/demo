@@ -1,0 +1,43 @@
+.left_box {
+  width: 90px;
+  height: 100%;
+  background: #fff;
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
+.left_box li {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: pink;
+  border-right: 1px solid #f00;
+  border-bottom: 1px solid #f00;
+  color: #fff;
+}
+.left_box li.current {
+  background: #fff;
+  border-right: none;
+  color: #007aff;
+}
+.left_box li a {
+  display: block;
+  color: inherit;
+}
+.right_box {
+  overflow: hidden;
+  background: #fff;
+  height: 100%;
+  position: relative;
+}
+.right_box ul li {
+  width: 33.33%;
+  float: left;
+}
+.right_box ul li img {
+  width: 100%;
+}
+.right_box ul li p {
+  text-align: center;
+  line-height: 30px;
+}

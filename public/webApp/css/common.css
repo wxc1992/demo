@@ -1,0 +1,77 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.bigbox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  min-width: 320px;
+  max-width: 640px;
+  background: pink;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 45px 0 55px 0;
+}
+.bigbox header {
+  width: 100%;
+  height: 45px;
+  text-align: center;
+  color: #fff;
+  background: darkorange;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.bigbox header h4 {
+  line-height: 45px;
+  font-weight: 400;
+  margin: 0;
+}
+.bigbox header a {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  position: absolute;
+  top: 0;
+}
+.bigbox header a:first-child {
+  left: 0;
+}
+.bigbox header a:last-child {
+  right: 0;
+}
+.bigbox footer {
+  width: 100%;
+  height: 55px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: darkorange;
+}
+.bigbox footer ul li {
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding: 10px;
+}
+.bigbox footer ul li a {
+  color: #fff;
+}
+.bigbox footer ul li a p {
+  color: #fff;
+}
+.main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
