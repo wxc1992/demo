@@ -21,7 +21,7 @@
         </header>
         <div class="main">
             <div class="mui-scroll-wrapper">
-                <div class="class="mui-scroll"">
+                <div class="mui-scroll">
                     <div class="seach_box">
                         <input type="text" placeholder="请输入关键字">
                         <button>搜索</button>
@@ -82,7 +82,7 @@
                 <ul>
                     {{each list v i}}
                     <li class="mui-clearfix">
-                        <a href="#" class="mui-pull-left">{{v}}</a>
+                        <a href="list.html?key={{v}}" class="mui-pull-left">{{v}}</a>
                         <span class="mui-icon mui-icon-closeempty btn-delete mui-pull-right"  data-index='{{i}}'></span>
                     </li>
                     {{/each}}
