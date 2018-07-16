@@ -75,3 +75,25 @@ body {
   overflow: hidden;
   background: #fff;
 }
+.seach_box {
+  padding: 10px;
+  position: relative;
+}
+.seach_box button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  height: 34px;
+  background: darkorange;
+  color: #fff;
+}
+.seach_box input {
+  padding: 0;
+  margin: 0;
+  border: 1px solid darkorange;
+  padding-left: 10px;
+  color: #999;
+  line-height: 34px;
+  height: 34px;
+  font-size: 14px;
+}

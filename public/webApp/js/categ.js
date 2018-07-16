@@ -8,7 +8,6 @@ $(function () {
             console.log();
             var id = info.rows[0].id;
             second(id);
-            
         }
     })
     

@@ -1,0 +1,24 @@
+.seach_content {
+  padding: 10px;
+}
+.seach_content .seach_content_title {
+  line-height: 30px;
+  font-size: 13px;
+  color: #666;
+}
+.seach_content .seach_content_title a {
+  color: #666;
+}
+.seach_content ul {
+  border: 1px dashed #f00;
+  border-bottom: none;
+  margin-top: 10px;
+}
+.seach_content ul li {
+  border-bottom: 1px dashed #f00;
+  padding: 0 3px;
+  font-size: 12px;
+}
+.seach_content ul li a {
+  color: #666;
+}
