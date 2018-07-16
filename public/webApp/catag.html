@@ -14,8 +14,8 @@
 <body>
 <div class="bigbox">
     <header>
-        <a class="header_left ">
-            <i class="fa fa-home icon-home"></i>
+        <a class="header_left " href="javascript:history.go (-1);">
+            <i class="mui-icon mui-icon-back"></i>
         </a>
         <h4>理想首页</h4>
         <a class="header_right">
@@ -26,7 +26,7 @@
         <div class="left_box">
             <div class="mui-scroll-wrapper">
                 <ul class="mui-scroll">
-                    <li class="current"><a href="javascript:;">运动馆</a></li>
+                    <!-- <li class="current"><a href="javascript:;">运动馆</a></li>
                     <li><a href="javascript:;">运动馆</a></li>
                     <li><a href="javascript:;">运动馆</a></li>
                     <li><a href="javascript:;">运动馆</a></li>
@@ -42,7 +42,7 @@
                     <li><a href="javascript:;">运动馆</a></li>
                     <li><a href="javascript:;">运动馆</a></li>
                     <li><a href="javascript:;">运动馆</a></li>
-                    <li><a href="javascript:;">运动馆</a></li>
+                    <li><a href="javascript:;">运动馆</a></li> -->
                 </ul>
             </div>
         </div>
@@ -50,32 +50,7 @@
             <div class="mui-scroll-wrapper">
                 <div class="mui-scroll">
                     <ul class="mui-clearfix">
-                        <li><a href="javascript:;"><img src="./images/brand1.png" alt=""></a><p>耐克</p></li>
-                        <li><a href="javascript:;"><img src="./images/brand2.png" alt=""></a><p>阿迪</p></li>
-                        <li><a href="javascript:;"><img src="./images/brand3.png" alt=""></a><p>新百伦</p></li>
-                        <li><a href="javascript:;"><img src="./images/brand4.png" alt=""></a><p>哥伦比亚</p></li>
-                        <li><a href="javascript:;"><img src="./images/brand2.png" alt=""></a><p>匡威</p></li>
-                        <li><a href="javascript:;"><img src="./images/brand4.png" alt=""></a><p>哥伦比亚</p></li>
-                        <li><a href="javascript:;"><img src="./images/brand2.png" alt=""></a><p>匡威</p></li>
-                        <li><a href="javascript:;"><img src="./images/brand1.png" alt=""></a><p>耐克</p></li>
-                        <li><a href="javascript:;"><img src="./images/brand2.png" alt=""></a><p>阿迪</p></li>
-                        <li><a href="javascript:;"><img src="./images/brand3.png" alt=""></a><p>新百伦</p></li>
-                        <li><a href="javascript:;"><img src="./images/brand3.png" alt=""></a><p>新百伦</p></li>
-                        <li><a href="javascript:;"><img src="./images/brand3.png" alt=""></a><p>新百伦</p></li>
-                        <li><a href="javascript:;"><img src="./images/brand1.png" alt=""></a><p>耐克</p></li>
-                        <li><a href="javascript:;"><img src="./images/brand2.png" alt=""></a><p>阿迪</p></li>
-                        <li><a href="javascript:;"><img src="./images/brand3.png" alt=""></a><p>新百伦</p></li>
-                        <li><a href="javascript:;"><img src="./images/brand4.png" alt=""></a><p>哥伦比亚</p></li>
-                        <li><a href="javascript:;"><img src="./images/brand2.png" alt=""></a><p>匡威</p></li>
-                        <li><a href="javascript:;"><img src="./images/brand3.png" alt=""></a><p>新百伦</p></li>
-                        <li><a href="javascript:;"><img src="./images/brand3.png" alt=""></a><p>新百伦</p></li>
-                        <li><a href="javascript:;"><img src="./images/brand3.png" alt=""></a><p>新百伦</p></li>
-                        <li><a href="javascript:;"><img src="./images/brand1.png" alt=""></a><p>耐克</p></li>
-                        <li><a href="javascript:;"><img src="./images/brand2.png" alt=""></a><p>阿迪</p></li>
-                        <li><a href="javascript:;"><img src="./images/brand3.png" alt=""></a><p>新百伦</p></li>
-                        <li><a href="javascript:;"><img src="./images/brand4.png" alt=""></a><p>哥伦比亚</p></li>
-                        <li><a href="javascript:;"><img src="./images/brand2.png" alt=""></a><p>匡威</p></li>
-                        <li><a href="javascript:;"><img src="./images/brand3.png" alt=""></a><p>新百伦</p></li>
+                       
                     </ul>
                 </div>
             </div>
@@ -84,13 +59,13 @@
     <footer>
         <ul>
             <li>
-                <a href="javascript:;">
+                <a href="index.html">
                     <i class="fa fa-home"></i>
                     <p>首页</p>
                 </a>
             </li>
             <li>
-                <a href="javascript:;">
+                <a href="catag.html">
                     <i class="fa fa-bars"></i>
                     <p>分类</p>
                 </a>
@@ -112,7 +87,21 @@
 </div>
 <script src="./lib/zepto/zepto.min.js"></script>
 <script src="lib/mui/js/mui.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
 <script src="js/common.js"></script>
 <script src="./js/categ.js"></script>
+<script type="text/html" id="toplist">
+    {{each rows v i}}
+        <li class="{{i==0?'current':''}}" data-id="{{v.id}}"><a href="javascript:;">{{v.categoryName}}</a></li>
+    {{/each}}
+</script>
+<script type="text/html" id="content">
+    {{if rows.length ==0}}
+        <p style="padding:50px">这个分类没有数据哦</p>
+    {{/if}}
+    {{each rows v i}}
+        <li><a href="javascript:;"><img src="{{v.brandLogo?v.brandLogo:'./images/none.jpg'}}" alt=""></a><p>{{v.brandName}}</p></li>
+    {{/each}}
+</script>
 </body>
 </html>
