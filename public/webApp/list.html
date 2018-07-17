@@ -40,7 +40,7 @@
           </div>
           <!-- 产品 -->
           <div class="product">
-            <div class="loading"><img src="./images/loading.gif" alt=""></div>
+            <!-- <div class="loading"><img src="./images/loading.gif" alt=""></div> -->
             <ul class="mui-clearfix">
             </ul>
           </div>
@@ -62,21 +62,19 @@
  <script src="lib/mui/js/mui.js"></script>
  <script src="lib/artTemplate/template-web.js"></script>
  <script src="js/common.js"></script>
- <script src="js/list.js"></script>
+ <script src="js/list2.js"></script>
  <script type="text/html" id="tpl">
-      {{if data.length == 0}}
-         <div class="empty_data">你查找的关键字没有对应的数据哦，要不要换个试试~~~~~~~</div>
-      {{/if}}
+     
     {{each data v i}}
-        <li data-id="{{data.brandId}}">
-            <a href="javascript:;">
+        <li data-id="{{v.id}}">
+            <a href="product_detail.html?id={{v.id}}">
                 <img src="{{v.pic[0].picAddr}}" alt="">
                 <p class="mui-ellipsis-2">{{v.proDesc}}</p>
                 <div>
                 <span class="price">¥{{v.price}}</span>
                 <del class="oldprice">¥{{v.oldPrice}}</del>
                 </div>
-                <button class="mui-btn mui-btn-blue">立即购买</button>
+                <button class="mui-btn mui-btn-orange">立即购买</button>
             </a>
         </li>
     {{/each}}

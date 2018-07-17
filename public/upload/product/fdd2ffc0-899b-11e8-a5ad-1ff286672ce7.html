@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/* 伪元素：就理解为一个标签，由css渲染  所以不会增大你的DOM开销 
+			
+		 伪元素content一定不能少 即使里面没有内容 也要写一个空
+		
+
+		*/
+
+		/* 为什么利用伪元素清除浮动 */
+
+		/* 
+			
+			之前额外标签法每一次清除浮动会增加一个多余的盒子 不利于DOM优化  所以现在将这个盒子利用伪元素去代替  因为伪元素由css渲染 不会增大DOM树
+
+		*/
+
+		.box::before {
+			content: '';
+			color: red;
+			font-size: 40px;
+			display: block;
+			width: 100px;
+			height: 100px;
+			background-color: green;
+
+		}
+		.box::after {
+			content: '18';
+			color: red;
+		}
+		/* span {
+			color: red;
+		} */
+	</style>
+</head>
+<body>
+	<div class="box"><!-- ::before --><!-- <span>飞飞</span> -->的年纪为  <!-- ::after --></div>
+	
+
+	<style>
+		.father {
+			width: 200px;
+			border: 1px solid #000;
+		}
+		.son {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			float: left;
+		}
+		.laowang {
+			width: 200px;
+			height: 100px;
+			background-color: lime;
+		}
+		.clearfix::after {
+			content: '';
+			display: block;
+			clear: both;
+			visibility: hidden;
+			height: 0;
+		}
+		/* .clear {
+			要求必须是一个块元素
+			clear: both;
+		} */
+	</style>
+	<div class="father clearfix">
+		<div class="son"></div>
+		<!-- <div class="clear"></div> -->
+		<!-- ::after -->
+	</div>
+	<div class="laowang"></div>
+</body>
+</html>
