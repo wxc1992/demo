@@ -1,0 +1,34 @@
+.mui-scroll > div {
+  padding: 10px;
+}
+.mui-scroll > div:first-child {
+  padding: 0;
+}
+.mui-scroll .price span {
+  color: #f00;
+}
+.mui-scroll .price del {
+  font-size: 14px;
+  color: #666;
+}
+.mui-scroll .prosize span {
+  padding: 5px;
+  border: 1px solid #ccc;
+  line-height: 35px;
+}
+.mui-scroll .prosize span.active {
+  background: red;
+  color: #fff;
+}
+.bigbox {
+  padding-bottom: 65px;
+}
+.bigbox footer {
+  background: #eee;
+  padding: 0 10px;
+  line-height: 65px;
+  height: 65px;
+}
+.bigbox footer div {
+  padding-top: 15px;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/product_detail.css">
+  </head>
+<body>
+ <div class="bigbox">
+  <header>
+    <a class="header_left " href="javascript:history.go(-1);"><i class="mui-icon mui-icon-arrowleft"></i></a>
+    <h4>商品详情页</h4>
+    <a class="header_right" href="javascript:location.reload();"><i class="mui-icon mui-icon-reload"></i></a>
+  </header>
+  <!-- 内容区 开始-->
+  <div class="main">
+    <div class="mui-scroll-wrapper">
+      <div class="mui-scroll">
+         
+         
+      </div>
+      </div>   
+    </div>
+   
+  <!-- 内容区 结束-->
+  <footer class="mui-clearfix">
+    <a href="cart.html" class="mui-pull-left">去购物车</a>
+    <div class="mui-pull-right">
+        <button class="mui-btn mui-btn-danger btn_add_cart">加入购物车</button>
+        <button class="mui-btn mui-btn-danger">立即购买</button>
+    </div>
+  </footer>
+ </div>
+ <script src="./lib/zepto/zepto.min.js"></script>
+ <script src="lib/mui/js/mui.js"></script>
+ <script src="lib/artTemplate/template-web.js"></script>
+ <script src="js/common.js"></script>
+ <script src="js/product_detail.js"></script>
+ <script type="text/html" id="tpl">
+    <div class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
+              <!--支持循环，需要重复图片节点-->
+                <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{pic[0].picAddr}}" /></a></div>
+              {{each pic v i}}
+                <div class="mui-slider-item"><a href="#"><img src="{{v.picAddr}}" /></a></div>
+              {{/each}}
+                <!--支持循环，需要重复图片节点-->
+                <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{pic[pic.length-1].picAddr}}" /></a></div>
+            </div>
+            <div class="mui-slider-indicator">
+                {{ each pic v i}}
+                    <div class="mui-indicator {{i==0?'mui-active':''}}"></div>
+                {{/each}}
+            </div>
+        </div>
+        <div class="proName"><strong>{{proName}}</strong></div>
+        <div class="price">
+            <strong>价格:</strong>
+            <span>&yen;{{price}}</span>
+            <del>{{oldPrice}}</del>
+        </div>
+        <div class="prosize mui-clearfix">
+            <strong class="mui-pull-left">尺码:</strong>
+            <div class="mui-pull-right size_box" style="width:85%;">
+                <% 
+                 var arr = size.split('-');
+                 for(var i = arr[0];i<=arr[1]; i++){
+                %>
+                <span>{{i}}</span>
+                <% } %>
+            </div>
+        </div>
+        <div>
+              <strong>数量:</strong>
+              <div class="mui-numbox" data-numbox-step='1' data-numbox-min='1' data-numbox-max='{{num}}'>
+                      <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+                      <input class="mui-numbox-input" type="number"/>
+                      <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+              </div>
+              <span>剩余 <i>{{num}}</i>双 </span>
+        </div>
+        <div>
+            <strong>描述:</strong>
+            <span>{{proDesc}}</span>
+        </div>
+</script>
+</body>
+</html>
