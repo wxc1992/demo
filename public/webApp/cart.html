@@ -1,12 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+    <title>商品列表</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/cart.css">
+  </head>
 <body>
-    购物车
+ <div class="bigbox">
+  <header>
+    <a class="header_left " href="javascript:history.go(-1);"><i class="mui-icon mui-icon-arrowleft"></i></a>
+    <h4>购物车</h4>
+  </header>
+  <!-- 内容区 开始-->
+    <div class="main">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                    <ul class="mui-table-view">
+                       
+                    </ul>
+            </div>
+        </div>
+    </div>
+    <div class="box_total">
+            <div class="mui-pull-left">订单总金额 ¥<span class="total">00.00</span></div>
+            <a href="javascript:;" class="mui-pull-right btn_order">生成订单</a>
+          </div>
+  <!-- 内容区 结束-->
+  <footer>
+    <ul>
+      <li><a href="index.html"><i class="fa fa-home"></i><p>首页</p></a></li>
+      <li><a href="catag.html"><i class="fa fa-bars"></i><p>分类</p></a></li>
+      <li><a href="cart.html"><i class="fa fa-shopping-cart"></i><p>购物车</p></a></li>
+      <li><a href="user.html"><i class="fa fa-user"></i><p>会员中心</p></a></li>
+    </ul>
+  </footer>
+ </div>
+ <script src="./lib/zepto/zepto.min.js"></script>
+ <script src="lib/mui/js/mui.js"></script>
+ <script src="lib/artTemplate/template-web.js"></script>
+ <script src="js/common.js"></script>
+ <script src="js/cart.js"></script>
+ <script type="text/html" id="tpl">
+    {{each list v i}}
+    <li class="mui-table-view-cell mui-media">
+            <div class="mui-slider-right mui-disabled">
+                <a class="mui-btn mui-btn-blue mui-icon mui-icon-compose btn_edit" 
+                data-id="{{v.id}}" 
+                data-num="{{v.num}}" 
+                data-productnum="{{v.proName}}" 
+                data-size="{{v.size}}"
+                data-productsize="{{v.productSize}}"></a>
+                <a data-id="{{v.id}}" class="mui-btn mui-btn-red mui-icon mui-icon-trash btn_delete"></a>
+            </div>
+            <div class="mui-slider-handle">
+                <div class="mui-table-cell">
+                    <div class="mui-media-object mui-pull-left img_box">
+                        <img class="img_in" src="{{v.pic[0].picAddr}}">
+                    </div>
+                    <div class="info_box">
+                        <p class='mui-ellipsis-2 desc'>{{v.proName}}</p>
+                        <p>
+                            <span class="price" data-price="{{v.price}}">&yen;{{v.price}}</span>
+                            <del>&yen;{{v.oldPrice}}</del>
+                            <i class="mui-pull-right num" data-num="{{v.num}}">{{v.num}}双</i>
+                        </p>
+                        <p>鞋码：{{v.size}}</p>
+                    </div>
+                    <input type="checkbox" class="ck" data-price="{{v.price}}" data-num="{{v.num}}">
+                </div>
+            </div>
+        </li>
+        {{/each}}
+</script>
 </body>
 </html>

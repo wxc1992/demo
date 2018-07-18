@@ -61,7 +61,10 @@ $(function(){
             }
         })
     })
-
+    //  点击立即购买
+    $('.btn-buy').on('click',function(){
+        location.href = 'cart.html';  
+    })
 
 
 })
